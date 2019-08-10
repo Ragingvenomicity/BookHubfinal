@@ -10,7 +10,7 @@ import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity {
-    BottomNavigationFragment bottomNavigationFragment = new BottomNavigationFragment();;
+    BottomNavigationFragment bottomNavigationFragment = new BottomNavigationFragment();
     BottomAppBar bottomAppBar;
 
 

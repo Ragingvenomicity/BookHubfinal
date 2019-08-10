@@ -15,11 +15,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-    /**
-     * Created by Belal on 10/18/2017.
-     */
-
-
     public class maths_books_adapter extends RecyclerView.Adapter<maths_books_adapter.ProductViewHolder> {
 
 
@@ -52,7 +47,6 @@ import java.util.List;
             holder.textViewTitle.setText(product.getTitle());
             holder.textViewShortDesc.setText(product.getShortdesc());
             holder.textViewRating.setText(String.valueOf(product.getRating()));
-            holder.textViewPrice.setText(String.valueOf(product.getPrice()));
 
             holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
 
@@ -76,7 +70,7 @@ import java.util.List;
                 textViewTitle = itemView.findViewById(R.id.textViewTitle);
                 textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
                 textViewRating = itemView.findViewById(R.id.textViewRating);
-                textViewPrice = itemView.findViewById(R.id.textViewPrice);
+
                 imageView = itemView.findViewById(R.id.imageView);
             }
         }

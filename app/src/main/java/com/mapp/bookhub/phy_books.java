@@ -1,6 +1,6 @@
 package com.mapp.bookhub;
 
-public class maths_books {
+public class phy_books {
     private int id;
     private String title;
     private String shortdesc;
@@ -8,7 +8,7 @@ public class maths_books {
     private double price;
     private int image;
 
-    public maths_books(int id, String title, String shortdesc, double rating, int image) {
+    public phy_books(int id, String title, String shortdesc, double rating, int image) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;

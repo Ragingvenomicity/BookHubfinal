@@ -38,6 +38,19 @@ public class BottomNavigationFragment extends BottomSheetDialogFragment {
 
                 switch(menuId)
                 {
+                    case R.id.workshops: fragment = new Chemistry();
+                        transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.fragment_container, fragment).commit();
+                        previousSelectedItem = menuId;
+                        menuItem.setChecked(true);
+                        break;
+
+                    case R.id.schedule: fragment = new Physics();
+                        transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.fragment_container, fragment).commit();
+                        previousSelectedItem = menuId;
+                        menuItem.setChecked(true);
+                        break;
 
 
 

@@ -1,5 +1,4 @@
 package com.mapp.bookhub;
-
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,13 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.Inflater;
 
-public class Mathematics extends Fragment {
-    List<maths_books> productList;
+public class Physics extends Fragment {
+    List<phy_books> productList;
 
     //the recyclerview
     RecyclerView recyclerView;
 
-    public Mathematics(){
+    public Physics(){
 
     }
     @Override
@@ -34,7 +33,7 @@ public class Mathematics extends Fragment {
 
         //adding some items to our list
         productList.add(
-                new maths_books(
+                new phy_books(
                         1,
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -42,7 +41,7 @@ public class Mathematics extends Fragment {
                         R.drawable.ic_launcher_foreground));
 
         productList.add(
-                new maths_books(
+                new phy_books(
                         1,
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
@@ -50,7 +49,7 @@ public class Mathematics extends Fragment {
                         R.drawable.ic_launcher_foreground));
 
         productList.add(
-                new maths_books(
+                new phy_books(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -59,7 +58,7 @@ public class Mathematics extends Fragment {
                         R.drawable.ic_launcher_foreground));
 
         productList.add(
-                new maths_books(
+                new phy_books(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -67,7 +66,7 @@ public class Mathematics extends Fragment {
                         R.drawable.ic_launcher_foreground));
 
         productList.add(
-                new maths_books(
+                new phy_books(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -75,7 +74,7 @@ public class Mathematics extends Fragment {
                         R.drawable.ic_launcher_foreground));
 
         productList.add(
-                new maths_books(
+                new phy_books(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -85,17 +84,18 @@ public class Mathematics extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View rootView = inflater.inflate(R.layout.mathematics, container, false);
+        View rootView = inflater.inflate(R.layout.physics, container, false);
         //getting the recyclerview from xml
 
         recyclerView = rootView.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         //creating recyclerview adapter
-        maths_books_adapter adapter = new maths_books_adapter(getActivity(), productList);
+        phy_books_adapter adapter = new phy_books_adapter(getActivity(), productList);
 
         recyclerView.setAdapter(adapter);
 
         return rootView;
     }
 }
+

@@ -7,18 +7,18 @@
     >
 
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/view_bottom_margin"/>
+        android:layout_height="match_parent"
+        >
 
-</RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_bottom_margin"/>
+
+    </RelativeLayout>
 
     <android.support.design.bottomappbar.BottomAppBar
         android:id="@+id/bottom_app_bar"
