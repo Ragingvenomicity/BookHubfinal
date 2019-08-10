@@ -39,22 +39,34 @@ public class BottomNavigationFragment extends BottomSheetDialogFragment {
                 switch(menuId)
                 {
 
-                    case R.id.convoke: fragment = new MathsFragment();
-                        break;
 
 
                     case R.id.sponsors: fragment = new LogoutFragment();
-
+                        transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.fragment_container, fragment).commit();
+                        previousSelectedItem = menuId;
+                        menuItem.setChecked(true);
                         break;
 
                     case R.id.combos: fragment = new AccountFragment();
-
+                        transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.fragment_container, fragment).commit();
+                        previousSelectedItem = menuId;
+                        menuItem.setChecked(true);
                         break;
+                    case R.id.convoke: fragment = new Mathematics();
+                        transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.fragment_container, fragment).commit();
+                        previousSelectedItem = menuId;
+                        menuItem.setChecked(true);
+                        break;
+
 
 
                 }
 
-                return loadFragment(fragment);
+                getDialog().cancel();
+                return true;
             }
         });
 
@@ -69,16 +81,5 @@ public class BottomNavigationFragment extends BottomSheetDialogFragment {
         super.onCreate(savedInstanceState);
         setStyle(BottomSheetDialogFragment.STYLE_NORMAL, R.style.CustomBottomSheetDialogTheme);
 
-    }
-    private boolean loadFragment(Fragment fragment) {
-        //switching fragment
-        if (fragment != null) {
-            getActivity().getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .commit();
-            return true;
-        }
-        return false;
     }
 }

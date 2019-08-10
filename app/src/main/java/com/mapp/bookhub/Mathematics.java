@@ -14,28 +14,30 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
-public class Mathematics extends AppCompatActivity {
+public class Mathematics extends Fragment {
     List<maths_books> productList;
-    BottomNavigationFragment bottomNavigationFragment = new BottomNavigationFragment();;
-    BottomAppBar bottomAppBar;
 
     //the recyclerview
     RecyclerView recyclerView;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mathematics);
+        View rootView  = inflater.inflate(R.layout.mathematics, container, false);
+
+
 
         //creating recyclerview adapter
-        maths_books_adapter adapter = new maths_books_adapter(this, productList);
+        maths_books_adapter adapter = new maths_books_adapter(getActivity(), productList);
 
         //setting adapter to recyclerview
         //getting the recyclerview from xml
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 
         //initializing the productlist
@@ -70,12 +72,7 @@ public class Mathematics extends AppCompatActivity {
                         60000,
                         R.drawable.ic_launcher_foreground));
 
-        bottomAppBar = findViewById(R.id.bottom_app_bar);
-        bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomNavigationFragment.show(getSupportFragmentManager(),bottomNavigationFragment.getTag());
-            }
-        });
+        return rootView;
     }
 }
+

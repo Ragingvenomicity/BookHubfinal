@@ -1,5 +1,6 @@
 package com.mapp.bookhub;
 
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 
 
@@ -29,7 +30,7 @@ import java.util.List;
         private List<maths_books> productList;
 
         //getting the context and product list with constructor
-        public maths_books_adapter(Context mCtx, List<maths_books> productList) {
+        public maths_books_adapter(FragmentActivity mCtx, List<maths_books> productList) {
             this.mCtx = mCtx;
             this.productList = productList;
         }
