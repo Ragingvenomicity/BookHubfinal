@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container">
+
+        <ImageView
+            android:id="@+id/booklogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_centerInParent="true"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/ic_logo" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="136dp"
+            android:background="@drawable/ic_get_knowledge_about_the_best_books_to_crack_competitive_exams" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="425dp"
+            android:background="@drawable/group1" />
+    </RelativeLayout>
+
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/black"
+        app:backgroundTint="@color/black"
+        app:navigationIcon="@drawable/ic_threebars"
+        app:fabAlignmentMode="center"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        app:fabCradleRoundedCornerRadius="20dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/progress_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/orange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:fontFamily="@font/montserratregular"
+            android:textColor="@color/primary_light"/>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/schedule"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Physics"
+        android:checkable="true"
+        />
+
+    <item
+        android:id="@+id/workshops"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Chemistry"
+        android:checkable="true"
+        />
+
+    <item
+        android:id="@+id/convoke"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Mathematics"
+        android:checkable="true"
+        />
+
+    <item
+        android:id="@+id/hackathon"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="My Likes"
+        android:checkable="false"
+        />
+
+    <item
+        android:id="@+id/combos"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Account_user"
+        android:checkable="true"
+        />
+
+
+
+    <item
+        android:id="@+id/sponsors"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Logout"
+        android:checkable="true"
+        />
+
+</menu>
