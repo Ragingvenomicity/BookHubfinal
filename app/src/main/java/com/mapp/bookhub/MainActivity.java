@@ -26,5 +26,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed(); commented this line in order to disable back press
+     }
 }

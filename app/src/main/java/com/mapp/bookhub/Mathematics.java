@@ -39,7 +39,7 @@ public class Mathematics extends Fragment {
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground));
+                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
 
         productList.add(
                 new maths_books(
@@ -47,7 +47,7 @@ public class Mathematics extends Fragment {
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground));
+                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
 
         productList.add(
                 new maths_books(
@@ -56,7 +56,7 @@ public class Mathematics extends Fragment {
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
 
-                        R.drawable.ic_launcher_foreground));
+                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
 
         productList.add(
                 new maths_books(
@@ -64,7 +64,7 @@ public class Mathematics extends Fragment {
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground));
+                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
 
         productList.add(
                 new maths_books(
@@ -72,7 +72,7 @@ public class Mathematics extends Fragment {
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground));
+                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
 
         productList.add(
                 new maths_books(
@@ -80,7 +80,7 @@ public class Mathematics extends Fragment {
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground));
+                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
     }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

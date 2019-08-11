@@ -26,17 +26,4 @@
             android:layout_marginTop="22dp" />
 
     </RelativeLayout>
-
-    <android.support.design.bottomappbar.BottomAppBar
-        android:id="@+id/bottom_app_bar"
-        style="@style/Widget.MaterialComponents.BottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/view_bottom_margin"
-        android:layout_gravity="bottom"
-        android:background="@color/grey"
-
-        app:backgroundTint="@color/grey"
-        app:fabAlignmentMode="center"
-        app:fabCradleRoundedCornerRadius="20dp"
-        app:navigationIcon="@drawable/ic_threebars" />
 </android.support.design.widget.CoordinatorLayout>

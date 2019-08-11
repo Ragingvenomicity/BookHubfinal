@@ -2,12 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:id="@+id/card_view"
+        android:layout_margin="5dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="20dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_look"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:background="@color/arcs_logo_orange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="10dp"
+            />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -15,10 +28,11 @@
             android:padding="8dp">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView1"
                 android:layout_width="120dp"
                 android:layout_height="90dp"
                 android:padding="4dp"
+                android:background="@drawable/ic_launcher_foreground"
                 />
 
             <TextView
@@ -26,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/imageView"
+                android:layout_toRightOf="@id/imageView1"
                 android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000" />
@@ -38,7 +52,7 @@
                 android:layout_below="@id/textViewTitle"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageView"
+                android:layout_toRightOf="@+id/imageView1"
                 android:text="13.3 Inch, 256 GB"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
@@ -49,13 +63,23 @@
                 android:layout_below="@id/textViewShortDesc"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageView"
+                android:layout_toRightOf="@+id/imageView1"
                 android:background="@color/colorPrimary"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="4.7"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="43dp"
+                android:layout_height="31dp"
+                android:layout_below="@+id/textViewShortDesc"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-6dp"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_thumb_up_black_24dp"/>
 
 
         </RelativeLayout>

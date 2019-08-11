@@ -5,15 +5,18 @@ public class chem_books {
     private String title;
     private String shortdesc;
     private double rating;
-    private int image;
+    private int image1;
+    private int image2;
 
-    public chem_books(int id, String title, String shortdesc, double rating, int image) {
+    public chem_books(int id, String title, String shortdesc, double rating,int image1,int image2) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
         this.rating = rating;
+        this.image1=image1;
+        this.image2=image2;
 
-        this.image = image;
+
     }
 
     public int getId() {
@@ -32,7 +35,10 @@ public class chem_books {
         return rating;
     }
 
-    public int getImage() {
-        return image;
+    public int getImage1() {
+        return image1;
     }
+    public int getImage2(){return image2;}
+
+
 }

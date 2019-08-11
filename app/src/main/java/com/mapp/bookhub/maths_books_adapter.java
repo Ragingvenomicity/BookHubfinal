@@ -47,8 +47,10 @@ import java.util.List;
             holder.textViewTitle.setText(product.getTitle());
             holder.textViewShortDesc.setText(product.getShortdesc());
             holder.textViewRating.setText(String.valueOf(product.getRating()));
+            holder.imageView2.setImageDrawable(mCtx.getResources().getDrawable(product.getImage2()));
 
-            holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
+            holder.imageView1.setImageDrawable(mCtx.getResources().getDrawable(product.getImage1()));
+
 
         }
 
@@ -62,7 +64,7 @@ import java.util.List;
         class ProductViewHolder extends RecyclerView.ViewHolder {
 
             TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
-            ImageView imageView;
+            ImageView imageView1,imageView2;
 
             public ProductViewHolder(View itemView) {
                 super(itemView);
@@ -70,8 +72,7 @@ import java.util.List;
                 textViewTitle = itemView.findViewById(R.id.textViewTitle);
                 textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
                 textViewRating = itemView.findViewById(R.id.textViewRating);
-
-                imageView = itemView.findViewById(R.id.imageView);
-            }
+                imageView1 = itemView.findViewById(R.id.imageView1);
+                imageView2 = itemView.findViewById(R.id.imageView2);}
         }
     }

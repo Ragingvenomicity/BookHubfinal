@@ -10,4 +10,9 @@ public class LoggingOff extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loggingoff);
     }
+
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed(); commented this line in order to disable back press
+    }
 }

@@ -1,6 +1,7 @@
 package com.mapp.bookhub;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,7 +31,7 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
     public chem_books_adapter.ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.maths_books, null);
+        View view = inflater.inflate(R.layout.chem_books, null);
         return new chem_books_adapter.ProductViewHolder(view);
     }
 
@@ -43,8 +44,9 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
         holder.textViewTitle.setText(product.getTitle());
         holder.textViewShortDesc.setText(product.getShortdesc());
         holder.textViewRating.setText(String.valueOf(product.getRating()));
+        holder.imageView2.setImageDrawable(mCtx.getResources().getDrawable(product.getImage2()));
 
-        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
+        holder.imageView1.setImageDrawable(mCtx.getResources().getDrawable(product.getImage1()));
 
     }
 
@@ -56,18 +58,23 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-
-        TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
-        ImageView imageView;
-
-        public ProductViewHolder(View itemView) {
+    ImageView imageView1,imageView2;
+        TextView textViewTitle, textViewShortDesc, textViewRating;
+        public ProductViewHolder(final View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    itemView.getContext().startActivity(new Intent(itemView.getContext(), Chapters_chem.class));
+                }
+            });
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             textViewRating = itemView.findViewById(R.id.textViewRating);
 
-            imageView = itemView.findViewById(R.id.imageView);
+            imageView1 = itemView.findViewById(R.id.imageView1);
+            imageView2 = itemView.findViewById(R.id.imageView2);
         }
     }
 }

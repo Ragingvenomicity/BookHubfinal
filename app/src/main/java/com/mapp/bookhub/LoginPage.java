@@ -102,4 +102,9 @@ public class LoginPage extends AppCompatActivity {
         username.setText(un);
         password.setText(pw);
     }
+
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed(); commented this line in order to disable back press
+    }
 }

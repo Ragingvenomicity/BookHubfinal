@@ -19,7 +19,7 @@
         <activity android:name=".LoginPage"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".LoggingOff"></activity>
-        <activity android:name=".Mathematics"></activity>
+        <activity android:name=".Chapters_chem"></activity>
     </application>
 
 </manifest>
