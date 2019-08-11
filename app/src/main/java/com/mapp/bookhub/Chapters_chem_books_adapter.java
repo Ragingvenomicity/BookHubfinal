@@ -1,7 +1,10 @@
 package com.mapp.bookhub;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,9 +52,17 @@ public class Chapters_chem_books_adapter extends RecyclerView.Adapter<Chapters_c
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewTitle, textViewShortDesc, textViewRating;
+        TextView textViewTitle;
         public ProductViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View itemView) {
+                    AppCompatActivity activity = (AppCompatActivity) itemView.getContext();
+                    Fragment myFragment = new bookexmpl();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.cardV, myFragment).addToBackStack(null).commit();
+                }
+            });
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
         }

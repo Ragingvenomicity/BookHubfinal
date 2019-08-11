@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_with_alpha"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:id="@+id/discreteScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:dsv_orientation="horizontal" />
+
+    <TextView
+        android:layout_width="105dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bookname"
+        android:fontFamily="@font/montserratregular"
+        android:text="Mathematics" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chapter 1"
+        android:layout_below="@+id/bookname"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/discreteScroll"
+        android:id="@+id/description"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="30dp"
+        android:text="Praesent ac lacus eu turpis viverra hendrerit in eget leo. Nulla tincidunt rhoncus turpis pulvinar egestas. Phasellus eget sem nibh. Nulla non mauris vel erat dapibus eleifend sed lobortis orci. In a tempor neque. "/>
+
+</RelativeLayout>
