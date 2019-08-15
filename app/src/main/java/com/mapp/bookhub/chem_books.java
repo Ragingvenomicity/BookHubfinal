@@ -6,15 +6,15 @@ public class chem_books {
     private String shortdesc;
     private double rating;
     private int image1;
-    private int image2;
-
-    public chem_books(int id, String title, String shortdesc, double rating,int image1,int image2) {
+    private int button;
+    public chem_books(int id, String title, String shortdesc, double rating,int image1,int button) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
         this.rating = rating;
         this.image1=image1;
-        this.image2=image2;
+        this.button=button;
+
 
 
     }
@@ -38,7 +38,5 @@ public class chem_books {
     public int getImage1() {
         return image1;
     }
-    public int getImage2(){return image2;}
-
 
 }

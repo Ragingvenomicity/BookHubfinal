@@ -34,7 +34,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="107dp"
             android:layout_marginBottom="251dp"
-            android:background="@drawable/ic_avradeep_gupta" />
+            android:text="Avradeep Gupta"
+            android:fontFamily="@font/montserratregular"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +45,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="72dp"
             android:layout_marginBottom="221dp"
-            android:background="@drawable/ic_avradeepguptagmailcom" />
+            android:text="avradeep1998@gmail.com"
+            android:fontFamily="@font/montserratregular"/>
 
         <Button
             android:layout_width="wrap_content"

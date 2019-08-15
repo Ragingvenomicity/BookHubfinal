@@ -7,8 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.util.List;
 
@@ -33,10 +39,11 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.chem_books, null);
         return new chem_books_adapter.ProductViewHolder(view);
+
     }
 
     @Override
-    public void onBindViewHolder(chem_books_adapter.ProductViewHolder holder, int position) {
+    public void onBindViewHolder(final chem_books_adapter.ProductViewHolder holder, int position) {
         //getting the product of the specified position
         chem_books product = productList.get(position);
 
@@ -44,12 +51,23 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
         holder.textViewTitle.setText(product.getTitle());
         holder.textViewShortDesc.setText(product.getShortdesc());
         holder.textViewRating.setText(String.valueOf(product.getRating()));
-        holder.imageView2.setImageDrawable(mCtx.getResources().getDrawable(product.getImage2()));
+        holder.buttonFavorite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                setscaleAnimation(holder.buttonFavorite);
+            }
+        });
 
         holder.imageView1.setImageDrawable(mCtx.getResources().getDrawable(product.getImage1()));
 
     }
-
+   public void setscaleAnimation(View view){
+       ScaleAnimation  scaleAnimation = new ScaleAnimation(0.7f, 1.0f, 0.7f, 1.0f, Animation.RELATIVE_TO_SELF, 0.7f, Animation.RELATIVE_TO_SELF, 0.7f);
+       scaleAnimation.setDuration(500);
+       BounceInterpolator bounceInterpolator = new BounceInterpolator();
+       scaleAnimation.setInterpolator(bounceInterpolator);
+       view.startAnimation(scaleAnimation);
+   }
 
     @Override
     public int getItemCount() {
@@ -58,7 +76,8 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-    ImageView imageView1,imageView2;
+    ImageView imageView1;
+        ToggleButton buttonFavorite;
         TextView textViewTitle, textViewShortDesc, textViewRating;
         public ProductViewHolder(final View itemView) {
             super(itemView);
@@ -67,14 +86,17 @@ public class chem_books_adapter  extends RecyclerView.Adapter<chem_books_adapter
                 public void onClick(View view) {
                     itemView.getContext().startActivity(new Intent(itemView.getContext(), Chapters_chem.class));
                 }
+
             });
+
+            buttonFavorite=itemView.findViewById(R.id.button_favorite);
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             textViewRating = itemView.findViewById(R.id.textViewRating);
 
             imageView1 = itemView.findViewById(R.id.imageView1);
-            imageView2 = itemView.findViewById(R.id.imageView2);
+
         }
     }
 }

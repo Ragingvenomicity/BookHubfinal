@@ -33,13 +33,14 @@ public class DiscreteScrollAdapter extends RecyclerView.Adapter<DiscreteScrollAd
     @Override
     public ScrollViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.discrete_scroll_adapter,parent,false);
+        View view = layoutInflater.inflate(R.layout.chem_book_example,parent,false);
         return new ScrollViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ScrollViewHolder holder, int position) {
-}
+
+    }
 
     @Override
     public int getItemCount() {
@@ -48,7 +49,7 @@ public class DiscreteScrollAdapter extends RecyclerView.Adapter<DiscreteScrollAd
 
     public class ScrollViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView icon;
+
 
         public ScrollViewHolder(View itemView) {
             super(itemView);

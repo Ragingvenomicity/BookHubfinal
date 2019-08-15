@@ -11,6 +11,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
+import android.widget.Button;
+import android.widget.CompoundButton;
 
 import com.mapp.bookhub.R;
 import com.mapp.bookhub.chem_books;
@@ -25,7 +30,6 @@ public class Chemistry extends Fragment {
 
     //the recyclerview
     RecyclerView recyclerView;
-
     public Chemistry(){
 
     }
@@ -43,7 +47,7 @@ public class Chemistry extends Fragment {
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
+                        R.drawable.ic_launcher_foreground,R.id.button_favorite));
 
         productList.add(
                 new chem_books(
@@ -51,7 +55,7 @@ public class Chemistry extends Fragment {
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
+                        R.drawable.ic_launcher_foreground,R.id.button_favorite));
 
         productList.add(
                 new chem_books(
@@ -60,7 +64,7 @@ public class Chemistry extends Fragment {
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
 
-                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
+                        R.drawable.ic_launcher_foreground,R.id.button_favorite));
 
         productList.add(
                 new chem_books(
@@ -68,7 +72,7 @@ public class Chemistry extends Fragment {
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
+                        R.drawable.ic_launcher_foreground,R.id.button_favorite));
 
         productList.add(
                 new chem_books(
@@ -76,7 +80,7 @@ public class Chemistry extends Fragment {
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
+                        R.drawable.ic_launcher_foreground,R.id.button_favorite));
 
         productList.add(
                 new chem_books(
@@ -84,9 +88,10 @@ public class Chemistry extends Fragment {
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
-                        R.drawable.ic_launcher_foreground,R.drawable.ic_thumb_up_black_24dp));
+                        R.drawable.ic_launcher_foreground,R.id.button_favorite));
     }
-    @Override
+
+        @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View rootView = inflater.inflate(R.layout.chemistry, container, false);
@@ -99,6 +104,7 @@ public class Chemistry extends Fragment {
         chem_books_adapter adapter = new chem_books_adapter(getActivity(), productList);
         recyclerView.setAdapter(adapter);
 
+
         return rootView;
     }
-}
+        }

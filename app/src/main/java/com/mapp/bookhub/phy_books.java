@@ -5,17 +5,18 @@ public class phy_books {
     private String title;
     private String shortdesc;
     private double rating;
-    private double price;
-    private int image1,image2;
-
-    public phy_books(int id, String title, String shortdesc, double rating, int image1,int image2) {
+    private int image1;
+    private int button;
+    public phy_books(int id, String title, String shortdesc, double rating,int image1,int button) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
         this.rating = rating;
+        this.image1=image1;
+        this.button=button;
 
-        this.image1 = image1;
-        this.image2=image2;
+
+
     }
 
     public int getId() {
@@ -37,7 +38,5 @@ public class phy_books {
     public int getImage1() {
         return image1;
     }
-    public int getImage2() {
-        return image2;
-    }
+
 }

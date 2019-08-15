@@ -4,7 +4,6 @@ public class DiscreteScrollClass {
 
     String des;
 
-    public DiscreteScrollClass(){}
 
     public DiscreteScrollClass(String des) {
         this.des = des;
@@ -15,8 +14,5 @@ public class DiscreteScrollClass {
         return des;
     }
 
-    public void setDes(String des) {
-        this.des = des;
-    }
 
 }
